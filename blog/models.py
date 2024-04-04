@@ -15,10 +15,11 @@ class Post(models.Model):
             verbose_name = 'post'
             verbose_name_plural = 'posts'
             db_table = 'blog_posts'
-            ordering = ('-modify_dt')
+            ordering = ('-modify_dt' , )
         
     def __str__(self):
-          return self.title+"  "+ self.url
+          return self.title
+    # +""+ self.url
     def get_absolute_url(self):
           return reverse('blog:post_detail', args=(self.slug,  ))
     def get_previous(self):
