@@ -1,3 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Bookmark Detail{% endblock %}
+
+{% block content %}
+
 <h1>Title: {{object.title}}</h1>
 <br>
 <h3>URL: <a href="{{object.url}}">{{object.url}}</a> </h3>
+
+{% endblock %}
